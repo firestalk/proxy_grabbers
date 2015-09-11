@@ -1,2 +1,2 @@
-# proxy_grabbers
-Grabbers for various proxylist sites
+# Proxy Grabbers
+Grabbers for various proxylist sites.
