@@ -7,7 +7,7 @@ v0.4
 """
 from grab import Grab
 
-STARTLINK = 'http://www.xroxy.com/proxylist.php?port=&type=All_http&ssl=&country=&latency=&reliability=&sort=reliability&desc=true'
+STARTLINK = 'http://www.xroxy.com/proxylist.php?port=&type=All_http&ssl=&country=&latency=3000&reliability=9000&sort=latency'
 
 
 class XroxyLib():
@@ -41,7 +41,7 @@ class XroxyLib():
         self.g.go(link)
         lst = self.g.doc.select('/html/body/div/div[2]/table[1]/tr[@class]/td')
         if len(lst) < 1:
-            return
+            return []
         return self.parse_lst(lst)
 
     def parse_lst(self, lst):
